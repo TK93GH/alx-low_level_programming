@@ -5,14 +5,17 @@
  * starting from 0, followed by a new line.
  * Return: 0
  */
+
 int main(void)
 {
-	int c = 0;
+	int i;
 
-	while (c < 10);
+	int j = 48;
+
+	for (i = 0; i < 10; i++, j++);
+	
 	{
-		putchar(48 + c);
-		c++;
+		putchar(j);
 	}
 
 	putchar('\n');

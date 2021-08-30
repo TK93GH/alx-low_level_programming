@@ -2,7 +2,8 @@
 
 /**
  * main - main block
- * Description: Print all the numbers base of 16in lowercase, followed by a new line.
+ * Description: Print all the numbers base of 16 in lowercase,
+ * followed by a new line.
  * Return: 0
  */
 int main(void)
