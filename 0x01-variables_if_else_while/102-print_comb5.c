@@ -22,7 +22,7 @@ putchar(c % 10 + '0');
 if (!(i == 98 && c == 99))
 {	
 putchar(',');
-putchar(' ');
+putchar('');
 }
 }
 }
