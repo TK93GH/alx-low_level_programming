@@ -1,10 +1,8 @@
 #include <stdio.h>
-#include <stdlib.h>
 /**
- * main - main block
- * Description: Prints all possible combinations of two
- * two-digit numbers.
- * Return: 0
+ * main - description
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
@@ -20,7 +18,7 @@ putchar(' ');
 putchar(c / 10 + '0');
 putchar(c % 10 + '0');
 if (!(i == 98 && c == 99))
-{	
+{
 putchar(',');
 putchar(' ');
 }
