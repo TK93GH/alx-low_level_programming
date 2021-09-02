@@ -1,13 +1,13 @@
 #include "main.h"
-
+#include "holberton.h"
 /**
- * mul - function that multiplies two integers
- * @a: int type number
- * @b: int type number
- * Return: 0
+ * mul - multiply two numbers
+ *
+ * @a: number1
+ * @b: number2
+ * Return: Product of a and b
  */
-
 int mul(int a, int b)
 {
-	return (a *b);
+	return (a * b);
 }

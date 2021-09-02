@@ -1,32 +1,22 @@
 #include "main.h"
-
+#include "holberton.h"
 /**
- * more_numbers - prints more numbers
- * Return:void
+ * more_numbers - print all natural number 10 times
+ *
+ * Return: void
  */
-
 void more_numbers(void)
 {
-	char n, c;
-	int i = 0;
+	int i, j;
 
-
-	while (i < 10)
+	for (i = 0; i <= 9; i++)
 	{
-		for (n = 0; n <= 14; n++)
+		for (j = 0; j <= 14; j++)
 		{
-			c = n;
-			if (n > 9)
-			{
-				_putchar('1');
-				c = n % 10;
-			}
-
-			_putchar('0' + c);
+			if (j > 9)
+				_putchar('0' + j / 10);
+			_putchar('0' + j % 10);
 		}
-
 		_putchar('\n');
-		i++;
 	}
-
 }
