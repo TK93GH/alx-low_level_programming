@@ -1,30 +1,25 @@
+#include "main.h"
 #include "holberton.h"
-
 /**
- * _atoi - convert a string to an integer.
- * @s: the string to be comverted.
+ * _strcpy - copies the string pointed to by src, including the
+ * terminating null byte (\0), to the buffer pointed to by dest
  *
- *Return: The integer value of the comverted string.
+ * @dest: destination
+ * @src: source
+ * Return: void
  */
-
-int _atoi(char *s)
+char *_strcpy(char *dest, char *src)
 {
+	int i;
 
-	int sign = 1;
-	unsigned int num = 0;
+	i = 0;
 
-	do {
+	while (src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = src[i];
 
-		if (*s == '-')
-			sign *= -1;
-
-		else if (*s >= '0' && *s <= '9')
-			num = (num * 10) + (*s - '0');
-
-		else if (num > 0)
-			break;
-
-	} while (*s++);
-
-	return (num * sign);
+	return (dest);
 }
