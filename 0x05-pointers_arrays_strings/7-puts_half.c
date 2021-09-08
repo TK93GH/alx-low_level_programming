@@ -1,21 +1,20 @@
-#include "main.h"
 #include "holberton.h"
+
 /**
- * puts_half - prints half of a string, followed by a new line
- *
- * @str: The string input
- * Return: void
+ * puts_half - print second half of a string
+ * @str: char array string type
+ * Description: If odd number of chars, print (length - 1) / 2
  */
+
 void puts_half(char *str)
 {
-	int i, len;
-
-	len = 0;
+	int i;
 
 	for (i = 0; str[i] != '\0'; i++)
-		len++;
+		;
 
-	for (i = len / 2; i <= len; i++)
+	i++;
+	for (i /= 2; str[i] != '\0'; i++)
 	{
 		_putchar(str[i]);
 	}
