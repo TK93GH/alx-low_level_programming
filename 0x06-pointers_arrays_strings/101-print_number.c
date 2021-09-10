@@ -27,4 +27,3 @@ for (; divisor >= 1; n %= divisor, divisor /= 10)
 }
 
 }
-
