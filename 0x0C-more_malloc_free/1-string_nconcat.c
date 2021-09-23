@@ -1,4 +1,5 @@
-#include "main.h"
+
+#include "holberton.h"
 #include <stdlib.h>
 /**
 * string_nconcat - prints concatenate string;
