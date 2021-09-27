@@ -1,52 +1,52 @@
-#include "main.h"
-#include <stdlib.h>
+#include "holberton.h"
 
 /**
-  * string_nconcat - ...
-  * @s1: ...
-  * @s2: ...
-  * @n: ...
-  *
-  * Return: ...
-  */
+ * _strlen - find length of a string
+ * @s: string
+ * Return: int
+ */
+
+unsigned int _strlen(char *s)
+{
+unsigned int size = 0;
+for (; s[size] != '\0'; size++)
+;
+return (size);
+}
+
+/**
+ * *string_nconcat - concatenates two strings
+ * @s1: string 1
+ * @s2: string 2
+ * @n: first bytes of s2 to be used
+ * Return: pointer or NULL
+ */
+
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int i = 0, j = 0, k = 0, l = 0;
-	char *str;
+unsigned int i, j;
+char *m;
 
-	if (s1 == NULL)
-		s1 = "";
-	if (s2 == NULL)
-		s2 = "";
+if (s1 == NULL)
+	s1 = "";
+if (s2 == NULL)
+	s2 = "";
 
-	while (s1[i])
-		i++;
+if (n < _strlen(s2))
+	m = malloc(_strlen(s1) + n * sizeof(char) + 1);
+else
+	m = malloc(_strlen(s1) + _strlen(s2) + 1);
 
-	while (s2[k])
-		k++;
+if (m == 0)
+	return (NULL);
 
-	if (n >= k)
-		l = i + k;
-	else
-		l = i + n;
+for (i = 0; s1[i] != '\0'; i++)
+	m[i] = s1[i];
 
-	str = malloc(sizeof(char) * l + 1);
-	if (str == NULL)
-		return (NULL);
+for (j = 0; s2[j] != '\0' && j < n; i++, j++)
+	m[i] = s2[j];
 
-	k = 0;
-	while (j < l)
-	{
-		if (j <= i)
-			str[j] = s1[j];
+m[i] = '\0';
 
-		if (j >= i)
-		{
-			str[j] = s2[k];
-			k++;
-		}
-		j++;
-	}
-	str[j] = '\0';
-	return (str);
+return (m);
 }
